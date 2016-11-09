@@ -1,2 +1,2 @@
 # Hackerrank
-Algorithm Self Study
+My Algorithm Study at Hackerrank
