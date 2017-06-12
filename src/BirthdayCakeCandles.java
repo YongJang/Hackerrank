@@ -4,5 +4,6 @@
 public class BirthdayCakeCandles {
     public static void main(String args[]) {
         System.out.println("TEST");
+        System.out.println("why .ignore doesn't work appropriately!!!" );
     }
 }
