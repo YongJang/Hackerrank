@@ -1,5 +1,3 @@
 # ignore files
-*.class         			# java class files
-.idea/workspace.xml         # intelliJ workspace
 .idea/workspace.xml
 *.class
