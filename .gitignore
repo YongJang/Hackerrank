@@ -1,3 +1,4 @@
 # ignore files
-*.class
-/.idea\workspace.xml
+*.class			# java class files
+.idea\workspace.xml	# intelliJ workspace
+>>>>>>> parent of 3f1d627... .gitignore change
