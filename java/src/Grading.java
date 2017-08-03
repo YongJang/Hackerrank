@@ -7,7 +7,8 @@ import java.io.BufferedReader;
  * https://www.hackerrank.com/challenges/grading
  */
 public class Grading {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) throws Exception { new Grading(); }
+    public Grading() throws IOException{
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(in.readLine());
         int n;
