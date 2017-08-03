@@ -1,5 +1,6 @@
 // This is not my code
 // I'll leave this code while I study it.
+// This is a same solution "Grading.java" file.
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
