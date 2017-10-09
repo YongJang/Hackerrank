@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by Administrator on 2017-06-12.
+ * @author YongJang
  */
 public class BirthdayCakeCandles {
     public static void main(String args[]) throws IOException{

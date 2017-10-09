@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by USER on 2016-11-09.
+ * @author YongJang
  */
 public class Mandragora {
     public static void quickSort(int[] data, int l, int r){

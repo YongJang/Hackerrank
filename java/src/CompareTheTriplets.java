@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Created by USER on 2016-12-17.
+ * @author YongJang
  */
 public class CompareTheTriplets {
     public static void main (String args[]) throws IOException {

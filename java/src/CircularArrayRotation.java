@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * Created by USER on 2016-12-18.
+ * @author YongJang
  */
 public class CircularArrayRotation {
     public static void main (String arsgs[]) throws IOException {
