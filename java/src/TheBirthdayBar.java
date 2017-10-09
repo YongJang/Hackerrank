@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * @author YongJang
+ * https://www.hackerrank.com/challenges/the-birthday-bar/problem
+ */
+
 public class TheBirthdayBar {
     public static void main(String args[]) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
