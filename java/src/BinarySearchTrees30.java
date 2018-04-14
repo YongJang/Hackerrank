@@ -4,10 +4,10 @@ import java.util.Scanner;
  * @author YongJang
  * https://www.hackerrank.com/challenges/30-binary-search-trees
  */
-class Node {
-    Node left, right;
+class BinarySearchTrees30Node {
+    BinarySearchTrees30Node left, right;
     int data;
-    Node (int data) {
+    BinarySearchTrees30Node (int data) {
         this.data = data;
         left = right = null;
     }
@@ -15,12 +15,12 @@ class Node {
 
 public class BinarySearchTrees30 {
     /* My Solution
-    public static int getHeight(Node root) {
+    public static int getHeight(BinarySearchTrees30Node root) {
         int height = 0;
-        List<Node> nodeList = new Vector<Node>();
+        List<BinarySearchTrees30Node> nodeList = new Vector<Node>();
         nodeList.add(root);
         while (nodeList.size() != 0) {
-            List<Node> tmpList = new Vector<Node>();
+            List<BinarySearchTrees30Node> tmpList = new Vector<BinarySearchTrees30Node>();
             for (int i = 0; i < nodeList.size(); i++) {
                 if (nodeList.get(i).left != null)
                     tmpList.add(nodeList.get(i).left);
@@ -36,7 +36,7 @@ public class BinarySearchTrees30 {
     */
 
     // Better Solution
-    public static int getHeight(Node root) {
+    public static int getHeight(BinarySearchTrees30Node root) {
         if (root == null) {
             return -1;
         }
@@ -46,11 +46,11 @@ public class BinarySearchTrees30 {
     }
 
 
-    public static Node insert(Node root, int data){
+    public static BinarySearchTrees30Node insert(BinarySearchTrees30Node root, int data){
         if (root == null) {
-            return new Node(data);
+            return new BinarySearchTrees30Node(data);
         } else {
-            Node cur;
+            BinarySearchTrees30Node cur;
             if (data <= root.data) {
                 cur = insert(root.left, data);
                 root.left = cur;
@@ -64,7 +64,7 @@ public class BinarySearchTrees30 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
-        Node root = null;
+        BinarySearchTrees30Node root = null;
         while (T-- > 0) {
             int data = sc.nextInt();
             root = insert(root, data);
