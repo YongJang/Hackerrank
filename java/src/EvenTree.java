@@ -1,29 +1,42 @@
 import java.util.Scanner;
 
-class EvenTreeNode {
-    private int childNodeNum = 0;
-    private EvenTreeNode parentNode;
+/**
+ * @author YongJang
+ * https://www.hackerrank.com/challenges/even-tree/problem
+ */
 
-}
-
-public class EvenTree {
-
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String args[]) {
-        String[] treeNodesEdges = scanner.nextLine().split("\\s");
-        int treeNodes = Integer.parseInt(treeNodesEdges[0].trim());
-        int treeEdges = Integer.parseInt(treeNodesEdges[1].trim());
-
-        int[] treeFrom = new int[treeEdges];
-        int[] treeTo = new int[treeEdges];
-
-        for (int treeItr = 0; treeItr < treeEdges; treeItr++) {
-            String[] treeFromTo = scanner.nextLine().split("\\s");
-            treeFrom[treeItr] = Integer.parseInt(treeFromTo[0].trim());
-            treeTo[treeItr] = Integer.parseInt(treeFromTo[1].trim());
+class EvenTreeNode{
+    private EvenTreeNode parent;
+    private int descendantCount = 0;
+    public void setParent(EvenTreeNode parent){
+        this.parent = parent;
+        EvenTreeNode ancestor = parent;
+        while(ancestor != null){
+            ancestor.descendantCount++;
+            ancestor = ancestor.getParent();
         }
-
-
+    }
+    public EvenTreeNode getParent(){
+        return this.parent;
+    }
+    public int getDescendantCount() {
+        return this.descendantCount;
+    }
+}
+public class EvenTree {
+    private static final Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        int vertices = scanner.nextInt();
+        int edges = scanner.nextInt();
+        EvenTreeNode[] nodes = new EvenTreeNode[vertices];
+        while (vertices-- > 0)
+            nodes[vertices] = new EvenTreeNode();
+        while(edges-- > 0)
+            nodes[scanner.nextInt() - 1].setParent(nodes[scanner.nextInt() - 1]);
+        int disconnects = -1;
+        for(EvenTreeNode n:nodes)
+            if(n.getDescendantCount() % 2 == 1)
+                disconnects++;
+        System.out.println(disconnects);
     }
 }
