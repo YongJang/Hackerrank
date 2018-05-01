@@ -31,19 +31,28 @@ public class ClimbingTheLeaderboard {
         tempScore = leaderboard[leaderboard.length - 1];
         int checkpoint = leaderboard.length - 1;
         for (int i = 0; i < aliceScores.length; i++) {
-            for (int j = checkpoint - 1; j >= 0; j--) {
-                if (tempScore > aliceScores[i]) {
+            for (int j = checkpoint; j >= 0; j--) {
+                if (aliceScores[i] < leaderboard[j]) {
                     System.out.println(maxRank);
-                    continue;
-                }
+                    break;
+                } else if (aliceScores[i] == leaderboard[j]){
+                    System.out.println(maxRank - 1);
+                    break;
+                } else {
+                    if (tempScore != leaderboard[j]) {
+                        maxRank--;
+                        int temp = tempScore;
+                        tempScore = leaderboard[j];
+                        System.out.println("tempScore : " + temp + "->" + tempScore);
 
-                if (tempScore > leaderboard[j]) {
-                    tempScore = leaderboard[j];
-                    checkpoint = j;
-                    maxRank--;
+                    }
+                    checkpoint--;
+                    if (maxRank == 1) {
+                        System.out.println(maxRank);
+                    }
                 }
             }
-            System.out.println(maxRank);
+
         }
 
         /*
